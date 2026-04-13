@@ -4,3 +4,6 @@ def registr(id, name):
 def license(studio, license):
     print(f"© {studio} all rights reserved")
     print(f"with license: {license}")
+
+def writer(text):
+    print(f"[App Console]: {text}")
