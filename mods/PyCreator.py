@@ -72,10 +72,6 @@ def run_code():
     # запускаємо
     subprocess.Popen(["python", tmp_path])
 
-def block():
-    Blocker(1)
-
-
 id = "1568.4444"
 name = "PyCreator"
 studio = "Heigts studios©"
@@ -110,7 +106,8 @@ editmenu = Menu(top, tearoff=0)
 top.add_cascade(label="Edit", menu=editmenu)
 
 editmenu.add_separator()
-editmenu.add_command(label="Block app", command=block)
+editmenu.add_separator()
+
 
 # EDITOR
 Code = ScrolledText(
