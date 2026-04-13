@@ -7,10 +7,6 @@ https://github.com/redbuttontheare/modruner
 from Creator.Create import create_cookie as cookie
 from Creator.Mod import writer as wr
 
-with open("test_cookie.data", "r+") as f:
-    data = f.readlines()
-
-wr(f"your last cokie: {data}")
 wr("insert a text please")
 cook = "test_cookie"
 text = input()
