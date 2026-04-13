@@ -6,6 +6,7 @@ import tempfile
 import os
 
 from Creator.Mod import *
+from Creator.Block import *
 
 current_file = None
 
@@ -71,16 +72,22 @@ def run_code():
     # запускаємо
     subprocess.Popen(["python", tmp_path])
 
+def block():
+    Blocker(1)
+
 
 id = "1568.4444"
 name = "PyCreator"
 studio = "Heigts studios©"
-ver = "5.0"
+ver = "6.0"
 fount = ("Consolas", 16)
 lic = "All rights"
 
 registr(id, name)
 license(studio, lic)
+
+writer("This mod was be created for easy mods creating!")
+writer("If you did'n need PyCreator you can delete PyCreator")
 
 app = Tk()
 app.title(f"PyCreator | v{ver}")
@@ -99,7 +106,11 @@ filemenu.add_command(label="Save As", command=save_as)
 filemenu.add_separator()
 filemenu.add_command(label="Exit", command=app.quit)
 
+editmenu = Menu(top, tearoff=0)
+top.add_cascade(label="Edit", menu=editmenu)
 
+editmenu.add_separator()
+editmenu.add_command(label="Block app", command=block)
 
 # EDITOR
 Code = ScrolledText(
@@ -118,6 +129,9 @@ mod = 'MyMod'
 registr('444.7584', mod)
 license('', 'USR license')
 # if in your mod/plugin USR license other users
-# can edit your mod/plugin """)
+# can edit your mod/plugin
+
+writer('Hello, world!') # you can
+# print msg as 'App Console'""")
 
 app.mainloop()
