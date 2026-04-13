@@ -1,2 +1,3 @@
-# modruner
-Mod runner on python 2.0
+# Mod Runner
+
+### © Heights studios© all rights reserve
